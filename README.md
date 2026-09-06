@@ -6,8 +6,8 @@ A small, focused Neovim configuration for Rust development, built on
 General-purpose Neovim configs tend to accumulate every language and tool you
 have ever touched. This one carries only what Rust work actually needs:
 rust-analyzer via rustaceanvim, `Cargo.toml` support, a debugger, and enough
-Markdown, YAML, Docker, Git and Jujutsu support to live in a real repository.
-Around 40 plugins in total, most of them LazyVim's own defaults.
+Markdown, JSON, YAML, Docker, Git and Jujutsu support to live in a real
+repository. Around 44 plugins in total, most of them LazyVim's own defaults.
 
 It is deliberately unopinionated about everything else. There is no AI tooling,
 no note-taking, no second language server — if you want those, add them in
@@ -23,7 +23,7 @@ no note-taking, no second language server — if you want those, add them in
 - Optionally [`lazydocker`](https://github.com/jesseduffield/lazydocker) for the
   `<leader>D` container UI
 
-Everything else — taplo, yaml-language-server, dockerls,
+Everything else — taplo, json-lsp, yaml-language-server, dockerls,
 docker-compose-language-service, hadolint, marksman, codelldb,
 markdownlint-cli2, markdown-toc — is installed by Mason on first launch.
 
@@ -80,6 +80,7 @@ lazygit, trouble, ...) plus these extras, listed in `lazyvim.json`:
 | `lang.rust` | rustaceanvim (rust-analyzer), crates.nvim, codelldb, `rust`/`ron` parsers |
 | `lang.toml` | taplo LSP + TOML treesitter |
 | `lang.yaml` | yaml-language-server + SchemaStore |
+| `lang.json` | jsonls (json/jsonc) + SchemaStore, `json5` parser |
 | `lang.docker` | dockerls, docker-compose-language-service, hadolint, `dockerfile` parser |
 | `lang.markdown` | marksman LSP, render-markdown.nvim, markdown-preview, markdownlint-cli2 |
 | `lang.git` | gitcommit/git treesitter parsers |
